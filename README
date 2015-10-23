@@ -1,0 +1,23 @@
+This is homework 5 for Interactive Computer Graphics, by Shangqi Wu.
+
+This program is developed with the virtual machine provided by this course. 
+
+To compile this program, please use the makefile and type "make" in command line. Executable file will be named "hw5". Command "make clean" can remove the executable file.
+
+To run this program, please type "./hw5" in command line. It asks you to type input smf file first, e.g., you can type "bound-cow.smf". I have packed some smf file in this tar file. please type the name of file you want. For better parallel projection, if you want to test with other smf file from website, please use files whose names start with "bound-". This program successfully fulfills all requirements in the homework instructions. It displays the object while rotating the camera view. 
+
+Default view: 
+Once input file is sucessfully loaded, it will generate a window with black background with object in the center. It performs perspective projection, while camera starts from the front of the object (0, 0, 1), rotating counter-clockwisely with radius of 1. There are 2 light sources, a cyan (0, 1, 1) one in the right top front (1, 1, 1) and a yellow (1, 1, 0) one in the left top back (-1, 1, -1) of the window. 
+
+Menu instruction: 
+There are 2 submenus, one is for start/stop camera rotation, while the other one is for changing projection mode between perspective and parallel. You can make desired change by clicking menu opetions. 
+
+Keyboard instruction:
+'w': Increase height of camera.
+'s': Decrease height of camera.
+'a': Increase orbit radius of camera.
+'d': Decrease orbit radius of camera.
+'e': Increase speed of camera rotation when rotating counter-clockwisely, while decreasing speed when rotating clockwisely.
+'q': Decrease speed of camera rotation when rotating counter-clockwisely, while decreasing speed when rotating clockwisely. 
+Please note that about changing camera rotation speed:
+The default dt is 0.01, it can be added or substracted by 0.0025. So if you press 'q' for 4 times, it will stop rotation because dt is now 0. If you press 'q' one more time, it will rotate clockwisely since dt now is negative and it will rotate faster by pressing 'q'. You can make it rotate counter-clockwisely again by pressing 'e'. This is in part of my design to make it possible to rotate both 2 directions. 
